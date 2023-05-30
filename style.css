@@ -1,0 +1,154 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin:0;
+}
+
+html{
+    font-size: 62.5%;
+}
+ :root{
+    --dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    /* neutrals */
+    --dark-grey-magenta: hsl(303, 10%, 53%);
+    --light-grey-magenta:  hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+ }
+
+body{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 4em 2em;
+}
+
+.hero-title{
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--dark-magenta);
+    margin-bottom: .7em;
+}
+
+.hero-paragraph{
+
+    color: var(--dark-grey-magenta);
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.ratings{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--dark-magenta);
+    font-weight: 700;
+    line-height: 1.5em;
+    gap: 2em;
+    margin: 4em 0;
+}
+
+span{
+    display: block;
+}
+
+.reviews{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    color: var(--light-grey-magenta);
+}
+.card-container{    
+    background-color: var(--dark-magenta);
+    padding: 1.5em;
+    border-radius: .5em;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+.profile-wrapper{
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+    padding: 1em 0;
+}
+
+h2, h3{
+    font-size: 1.5rem;
+    line-height: 1.2em;
+}
+.verified{
+    font-weight: 300;
+    color: var(--soft-pink);
+}
+
+@media (min-width:850px){
+
+    body{
+    max-width: 850px;
+    margin:0 auto;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;    
+    }
+
+    .desktop-flex-wrapper{
+        display: flex;
+        justify-content: space-between;    
+    }
+
+    .info{
+        align-self: center;
+        flex-basis: 40%;     
+    }
+
+    .ratings{
+        flex-basis: 40%;
+    }
+
+    .hero-title, .hero-paragraph{
+        text-align: left;
+    }
+   
+    span{
+       display: inline;
+    }
+
+    .desktop-flex{
+        display: flex;
+        height:27vh;
+        margin-top: 1em;
+    }
+
+    .start{
+        align-self: flex-start;
+    }
+
+    .center{
+        align-self: center;
+    }
+
+    .end{
+        align-self: flex-end;
+    }
+
+
+    .reviews{
+        flex-direction: row;
+    }
+}
+.attribution {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top:2em ;
+  }
+  .attribution a {
+    color: var(--soft-pink);
+  }
